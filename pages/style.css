@@ -115,7 +115,7 @@ nav .fa {
   }
 }
 
-/* ---------Course------ */
+/* ---------Course-section------ */
 .course {
   width: 80%;
   margin: auto;
@@ -164,7 +164,7 @@ h3 {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
   }
 }
-/* ---------Campus------ */
+/* ---------Campus-section------ */
 
 .campus {
   width: 80%;
@@ -211,7 +211,7 @@ h3 {
   bottom: 49%;
   opacity: 1;
 }
-/* -------------Facilities----------- */
+/* -------------Facilities-section----------- */
 .facilities {
   width: 80%;
   margin: auto;
@@ -236,7 +236,7 @@ h3 {
   margin-bottom: 15px;
   text-align: left;
 }
-/* ---------------testimonials--------- */
+/* ---------------testimonials-section--------- */
 .testimonials {
   width: 80%;
   margin: auto;
@@ -275,7 +275,7 @@ h3 {
     margin-right: 15px;
   }
 }
-/* -------------cta---------------- */
+/* -------------cta-section---------------- */
 .cta {
   margin: 100px auto;
   width: 80%;
@@ -317,7 +317,7 @@ h3 {
 .fa-heart-o {
   color: #f44336;
 }
-/* -------------------about us---------------- */
+/* -------------------about us-section---------------- */
 .sub-header {
   height: 50vh;
   width: 100%;
@@ -423,7 +423,7 @@ h3 {
     font-size: 24px;
   }
 }
-/* -------------contact us page-------- */
+/* -------------contact us section-------- */
 .location {
   width: 80%;
   margin: auto;
