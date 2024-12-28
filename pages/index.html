@@ -32,8 +32,8 @@
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="blog.html">BLOG</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -207,6 +207,40 @@
 
     <!-- --------------------Call To Action -------------- -->
 
+    <!-- Slider Section -->
+    <section>
+      <div class="main-container">
+        <img
+          class="arrow"
+          id="left-arrow"
+          src="../left-arrow.svg"
+          onclick="prevSlide()"
+          height="100px"
+          width="100px"
+        />
+        <div id="slider-container">
+          <img
+            id="slider-image"
+            src="/images/slider-library.webp"
+            alt="Slide 1"
+          />
+        </div>
+        <img
+          class="arrow"
+          id="left-arrow"
+          src="../right-arrow.svg"
+          onclick="nextSlide()"
+          height="100px"
+          width="100px"
+        />
+      </div>
+      <div id="indicator-container">
+        <!-- Indicator dots will be added here dynamically -->
+      </div>
+    </section>
+
+    <!-- --------------------Call To Action -------------- -->
+
     <section class="cta">
       <h1>
         Enroll in Our Wide Range of Online Courses<br />Accessible From Anywhere
@@ -330,6 +364,50 @@
       function hideMenu() {
         navLinks.style.right = "-200px";
       }
+
+      const images = [
+        "/images/slider-library.webp",
+        "/images/nature.webp",
+        "/images/building.webp",
+      ];
+      let currentIndex = 0;
+
+      const sliderImage = document.getElementById("slider-image");
+      const leftArrow = document.getElementById("left-arrow");
+      const rightArrow = document.getElementById("right-arrow");
+
+      const indicatorContainer = document.getElementById("indicator-container");
+
+      // Create indicator dots
+      images.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("indicator-dot");
+        indicatorContainer.appendChild(dot);
+      });
+
+      const indicatorDots = document.querySelectorAll(".indicator-dot");
+
+      function updateSlide() {
+        sliderImage.src = images[currentIndex];
+        indicatorDots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentIndex);
+        });
+      }
+      // Function to show the next slide
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        sliderImage.src = images[currentIndex];
+      }
+
+      // Function to show the previous slide
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        sliderImage.src = images[currentIndex];
+      }
+      leftArrow.addEventListener("click", prevSlide);
+      rightArrow.addEventListener("click", nextSlide);
+
+      updateSlide();
     </script>
   </body>
 </html>
