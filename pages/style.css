@@ -134,6 +134,47 @@ p {
   line-height: 22px;
   padding: 10px;
 }
+.row-grid {
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 5%;
+  width: 100%;
+}
+
+.course-col-grid {
+  background-color: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.course-col-grid:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+  .row-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1580px) {
+  #post-grad {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* ---------Campus-section------ */
 
 .row {
   margin-top: 5%;
@@ -165,7 +206,6 @@ h3 {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
   }
 }
-/* ---------Campus-section------ */
 
 .campus {
   width: 80%;
@@ -545,24 +585,37 @@ h3 {
   font-size: 1.5rem;
 }
 
-.main-container {
+/* -------------Slider-------- */
+
+.slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  position: relative; /* For navigation arrows */
+  width: 80%; /* Adjust width as needed */
+  height: 400px; /* Set a fixed height for the slider */
+  margin: 50px auto;
 }
 
-#slider-container {
-  width: 100%;
-  max-width: 800px;
+.slider {
+  width: 700px;
   height: 450px;
   position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 40%;
+}
+
+.slider-prev {
+  left: -200px;
+}
+
+.slider-next {
+  right: -200px;
 }
 
 #slider-image {
@@ -570,6 +623,7 @@ h3 {
   height: 100%;
   object-fit: cover;
   transition: opacity 0.5s ease-in-out;
+  border-radius: 5%;
 }
 
 .arrow {
@@ -581,24 +635,10 @@ h3 {
   transform: scale(1.1);
 }
 
-#indicator-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+#about-text {
+  transition: all 0.3s ease-in-out;
 }
 
-.indicator-dot {
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.indicator-dot.active {
-  background-color: red;
-}
 /* Responsive design */
 @media (max-width: 768px) {
   .main-container {
