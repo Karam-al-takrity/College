@@ -5,12 +5,12 @@
   font-family: sans-serif;
 }
 body {
-  background-color: rgb(255, 255, 255);
+  background-color:#001 ;
   display: flex;
 }
 
 .menu {
-  background-color: cornflowerblue;
+  background-color: #123;
   width: 54px;
   height: 100vh;
   padding: 20px;
@@ -66,13 +66,13 @@ ul li a {
 ul li a:hover,
 .active,
 td:hover {
-  background-color: #12090955;
+  background-color:#ffffff55;
   cursor: pointer;
 }
 .data-info-1 .box:hover,
 .data-info-2 .box:hover {
   cursor: pointer;
-  background-color: rgb(9, 23, 38);
+  background-color: #ffffff55;
   transition: background-color 0.3s ease-in-out; /* Smooth and gradual hover effect */
 }
 
@@ -82,7 +82,7 @@ td:hover {
   width: 100%;
 }
 .log-out a {
-  background-color: rgb(0, 0, 0);
+  background-color: #a00;
 }
 ul li a i {
   font-size: 30px;
@@ -96,7 +96,7 @@ ul li a i {
   margin: 10px;
 }
 .title-info {
-  background-color: cornflowerblue;
+  background-color: #0481ff;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -119,7 +119,7 @@ ul li a i {
   margin-bottom: 5px;
 }
 .data-info-1 .box {
-  background-color: cornflowerblue;
+  background-color: #123;
   height: 150px;
   flex-basis: 150px;
   flex-grow: 1;
@@ -143,7 +143,7 @@ a {
   margin-bottom: 5px;
 }
 .data-info-2 .box {
-  background-color: cornflowerblue;
+  background-color: #123;
   height: 150px;
   flex-basis: 150px;
   flex-grow: 1;
@@ -168,7 +168,7 @@ a {
   font-size: 30px;
 }
 table {
-  background-color: cornflowerblue;
+  background-color: #123;
   width: 100%;
   text-align: center;
   border-spacing: 8px;
