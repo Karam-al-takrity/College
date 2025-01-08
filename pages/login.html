@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="./styles/login-signup.css" />
+    <link rel="stylesheet" href="./login-signup.css" />
   </head>
   <body>
     <h2>Login</h2>
@@ -14,7 +14,9 @@
         <input type="text" id="username" required />
         <label for="password">Password:</label>
         <input type="password" id="password" required />
-        <button type="submit">Login</button>
+        <button type="button" onclick="location.href='dashboard.html'">
+          Login
+        </button>
       </div>
       <p>Don't have an account? <a href="signup.html">Sign up</a></p>
     </form>

@@ -21,6 +21,14 @@ nav {
 nav img {
   width: 150px;
 }
+.log-in-btn {
+  background: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .nav-links {
   flex: 1;
   text-align: right;
