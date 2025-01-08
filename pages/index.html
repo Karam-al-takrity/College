@@ -161,53 +161,6 @@
       </div>
     </section>
 
-    <!--------------------testimonials---------------->
-
-    <section class="testimonials">
-      <h3>What Our Students Say</h3>
-      <p>
-        Hear from our students about their experiences and the impact of our
-        programs.
-      </p>
-      <div class="row">
-        <div class="testimonials-col">
-          <img src="../images/user1.webp" alt="Christine Berkley" />
-          <div>
-            <p>
-              The support and guidance I received were exceptional. The courses
-              were engaging, and the faculty ensured that we not only learned
-              theory but also applied it in real-world scenarios. This
-              experience truly shaped my career.
-            </p>
-            <h3>Christine Berkley</h3>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-        </div>
-        <div class="testimonials-col">
-          <img src="../images/user2.webp" alt="David Byer" />
-          <div>
-            <p>
-              Joining this institution was one of the best decisions of my life.
-              The curriculum is well-structured, and the facilities are
-              top-notch. I felt prepared and confident to face challenges in my
-              professional journey.
-            </p>
-            <h3>David Byer</h3>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- --------------------Call To Action -------------- -->
 
     <!-- Slider Section -->
     <section>
@@ -256,18 +209,8 @@
       </div>
     </section>
 
-    <!-- --------------------Call To Action -------------- -->
-
-    <section class="cta">
-      <h1>
-        Enroll in Our Wide Range of Online Courses<br />Accessible From Anywhere
-        in the World
-      </h1>
-      <a href="#contact-us" class="hero-btn">Contact Us</a>
-    </section>
-
-    <!-- -----------------About Us Content---------------- -->
-    <section class="about-us">
+     <!-- -----------------About Us Content---------------- -->
+     <section class="about-us">
       <div class="row">
         <div class="about-col">
           <h1>We Are the World's Largest University</h1>
@@ -278,13 +221,73 @@
             opportunities for success. Join us to explore an environment where
             learning knows no bounds.
           </p>
-          <a class="hero-btn red-btn" id="read-more-btn" onclick="readMore()">Read More</a>
+          <a class="hero-btn red-btn" id="read-more-btn" onclick="readMore()"
+            >Read More</a
+          >
         </div>
         <div class="about-col">
           <img src="../images/about.webp" alt="About Us" />
         </div>
       </div>
     </section>
+
+    <!-- --------------------Call To Action -------------- -->
+
+    <section class="cta">
+      <h1>
+        Enroll in Our Wide Range of Online Courses<br />Accessible From Anywhere
+        in the World
+      </h1>
+      <a href="#contact-us" class="hero-btn">Contact Us</a>
+    </section>
+
+    <!--------------------testimonials---------------->
+
+    <section class="testimonials">
+      <h3>What Our Students Say</h3>
+      <p>
+        Hear from our students about their experiences and the impact of our
+        programs.
+      </p>
+      <div class="row">
+        <div class="testimonials-col">
+          <img src="../images/user1.webp" alt="Christine Berkley" />
+          <div>
+            <p>
+              The support and guidance I received were exceptional. The courses
+              were engaging, and the faculty ensured that we not only learned
+              theory but also applied it in real-world scenarios. This
+              experience truly shaped my career.
+            </p>
+            <h3>Christine Berkley</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+        </div>
+        <div class="testimonials-col">
+          <img src="../images/user2.webp" alt="David Byer" />
+          <div>
+            <p>
+              Joining this institution was one of the best decisions of my life.
+              The curriculum is well-structured, and the facilities are
+              top-notch. I felt prepared and confident to face challenges in my
+              professional journey.
+            </p>
+            <h3>David Byer</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
 
     <!-- ----------------- location ---------------- -->
     <section id="location" class="location">
@@ -408,20 +411,21 @@
         }, 3000);
       }
 
-
       function readMore() {
         const paragraph = document.getElementById("about-text");
         const button = document.getElementById("read-more-btn");
 
-    // Check if additional text is already shown
+        // Check if additional text is already shown
         if (button.innerText === "Read More") {
-        paragraph.innerText += "\n Our college boasts world-class sports facilities designed to cater to athletes of all levels, from beginners to seasoned professionals. Our expansive football fields, professional-grade basketball courts, and indoor volleyball courts provide ample space for training and competition. We also offer state-of-the-art gyms, well-maintained swimming pools, and specialized fitness areas to help you stay in top physical condition. Each facility is equipped with cutting-edge technology and tools to enhance performance, monitor progress, and ensure safety during workouts and games In addition to our top-notch infrastructure, we offer personalized training programs and access to expert coaching staff who are committed to helping you reach your full potential. Whether you're pursuing sports at a competitive level or simply looking to stay active, our facilities support your fitness journey in every way. Our dedicated sports teams foster a spirit of camaraderie and discipline, while our events and leagues allow students to showcase their talents..";
-        button.innerText = "Read Less"; 
+          paragraph.innerText +=
+            "\n Our college boasts world-class sports facilities designed to cater to athletes of all levels, from beginners to seasoned professionals. Our expansive football fields, professional-grade basketball courts, and indoor volleyball courts provide ample space for training and competition. We also offer state-of-the-art gyms, well-maintained swimming pools, and specialized fitness areas to help you stay in top physical condition. Each facility is equipped with cutting-edge technology and tools to enhance performance, monitor progress, and ensure safety during workouts and games In addition to our top-notch infrastructure, we offer personalized training programs and access to expert coaching staff who are committed to helping you reach your full potential. Whether you're pursuing sports at a competitive level or simply looking to stay active, our facilities support your fitness journey in every way. Our dedicated sports teams foster a spirit of camaraderie and discipline, while our events and leagues allow students to showcase their talents..";
+          button.innerText = "Read Less";
         } else {
-       paragraph.innerText = "With a legacy of excellence in education, we take pride in being a global leader in higher learning. Our programs are   designed to empower students with knowledge, foster innovation, and create opportunities for success.";
-       button.innerText = "Read More";
-  }
-}
+          paragraph.innerText =
+            "With a legacy of excellence in education, we take pride in being a global leader in higher learning. Our programs are   designed to empower students with knowledge, foster innovation, and create opportunities for success.";
+          button.innerText = "Read More";
+        }
+      }
 
       // Start the image slider
       startSlider();
