@@ -23,7 +23,7 @@
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            <li><a href="home.html">HOME</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="blog.html">BLOG</a></li>
             <li><a href="product.html">PRODUCT</a></li>
             <li><a href="login.html" class="log-in-btn">Log-in</a></li>
@@ -31,22 +31,27 @@
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
-      <h1>Our Products</h1>
+      <!-- <h1>Our Products</h1> -->
     </header>
 
     <div class="container">
-      <h1 class="title">Products</h1>
+      <h1 class="title">Our Products</h1>
       <div class="box-container">
         <div class="box">
           <div class="default-content">
-            <img src="../images/product/foot.jpg" alt="Football" />
+            <img src="../images/product/foot.png" alt="Football" />
             <h3>Football</h3>
           </div>
           <div class="hover-content">
             <p>High-quality football for professional play.</p>
-            <a href="#" class="btn">
+            <a
+              href="#"
+              class="btn"
+              onclick="addToCart({name: 'Football', price: 20.00}, this)"
+            >
               <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart
             </a>
+            <p>20$ per mounth</p>
           </div>
         </div>
         <div class="box">
@@ -56,88 +61,120 @@
           </div>
           <div class="hover-content">
             <p>Professional basketball for indoor and outdoor use.</p>
-            <a href="#" class="btn">
+            <a
+              href="#"
+              class="btn"
+              onclick="addToCart({name: 'Basketball', price: 20.00}, this)"
+            >
               <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart
             </a>
+            <p>20$ per mounth</p>
           </div>
         </div>
         <div class="box">
           <div class="default-content">
-            <img src="../images/product/ping.jpg" alt="Ping Pong" />
+            <img src="../images/product/ping.png" alt="Ping Pong" />
             <h3>Ping Pong</h3>
           </div>
           <div class="hover-content">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Corrupti.
+              Challenge your friends with our exlusive indoor ping pong game.
             </p>
-            <a href="#" class="btn"
-              ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to
-              Cart</a
+            <a
+              href="#"
+              class="btn"
+              onclick="addToCart({name: 'Ping Pong', price: 50.00}, this)"
             >
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart
+            </a>
+            <p>50$ per mounth</p>
           </div>
         </div>
 
         <div class="box">
           <div class="default-content">
-            <img src="../images/product/base.jpg" alt="" />
+            <img src="../images/product/base.png" alt="" />
             <h3>Baseball</h3>
           </div>
           <div class="hover-content">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Corrupti.
-            </p>
-            <a href="#" class="btn"
-              ><i class="fa fa-shopping-cart" aria-hidden="true"></i> add to
-              cart</a
+            <p>test your physiscal limits with our amazing baseball service.</p>
+            <a
+              href="#"
+              class="btn"
+              onclick="addToCart({name: 'Baseball', price: 250.00}, this)"
             >
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart
+            </a>
+            <p>250$ per mounth</p>
           </div>
         </div>
         <div class="box">
           <div class="default-content">
-            <img src="../images/product/tennis.jpg" alt="" />
+            <img src="../images/product/tennis.png" alt="" />
             <h3>Tennis</h3>
           </div>
           <div class="hover-content">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Corrupti.
-            </p>
-            <a href="#" class="btn"
-              ><i class="fa fa-shopping-cart" aria-hidden="true"></i> add to
-              cart</a
+            <p>enjoy your tennis match with professional players.</p>
+            <a
+              href="#"
+              class="btn"
+              onclick="addToCart({name: 'Tennis', price: 150.00}, this)"
             >
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart
+            </a>
+            <p>150$ per mounth</p>
           </div>
         </div>
         <div class="box">
           <div class="default-content">
-            <img src="../images/product/chess.jpg" alt="" />
+            <img src="../images/product/chess.png" alt="" />
             <h3>Chess</h3>
           </div>
           <div class="hover-content">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Corrupti.
+              are you smart enough to get into our chess tournements? go and
+              find out.
             </p>
-            <a href="#" class="btn"
-              ><i class="fa fa-shopping-cart" aria-hidden="true"></i> add to
-              cart</a
+            <a
+              href="#"
+              class="btn"
+              onclick="addToCart({name: 'Chess', price: 10.00}, this)"
             >
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart
+            </a>
+            <p>10$ per mounth</p>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="toggleCart()">
+      <i class="fa fa-shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-content">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <div class="cart-total">
+          <h3>Total: $<span id="cart-total">0.00</span></h3>
+        </div>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="toggleCart()">Close</button>
       </div>
     </div>
     <footer class="footer">
       <h4>About Us</h4>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-        numquam quas! Mollitia, consectetur! Officia eum, distinctio laudantium
-        quidem at et eos a asperiores excepturi molestias adipisci reiciendis,
-        delectus animi.
+        We are committed to providing world-class education and empowering
+        students to achieve their dreams. Our mission is to foster a culture of
+        excellence, innovation, and inclusivity that transcends boundaries.<br />
+        Join us in shaping a brighter future for communities around the globe.
       </p>
     </footer>
-
+    <script src="cart.js"></script>
     <script>
       var navLinks = document.getElementById("navLinks");
 
