@@ -5,12 +5,12 @@
   font-family: sans-serif;
 }
 body {
-  background-color:#001 ;
+  background-color:rgb(255, 255, 255) ;
   display: flex;
 }
 
 .menu {
-  background-color: #123;
+  background-color: rgb(200, 26, 26);
   width: 54px;
   height: 100vh;
   padding: 20px;
@@ -72,7 +72,7 @@ td:hover {
 .data-info-1 .box:hover,
 .data-info-2 .box:hover {
   cursor: pointer;
-  background-color: #ffffff55;
+  background-color: #ad2f2f55;
   transition: background-color 0.3s ease-in-out; /* Smooth and gradual hover effect */
 }
 
@@ -96,7 +96,7 @@ ul li a i {
   margin: 10px;
 }
 .title-info {
-  background-color: #0481ff;
+  background-color: rgb(200, 26, 26);
   padding: 10px;
   display: flex;
   align-items: center;
@@ -119,7 +119,7 @@ ul li a i {
   margin-bottom: 5px;
 }
 .data-info-1 .box {
-  background-color: #123;
+  background-color: rgb(200, 26, 26);
   height: 150px;
   flex-basis: 150px;
   flex-grow: 1;
@@ -143,7 +143,7 @@ a {
   margin-bottom: 5px;
 }
 .data-info-2 .box {
-  background-color: #123;
+  background-color: rgb(200, 26, 26);
   height: 150px;
   flex-basis: 150px;
   flex-grow: 1;
@@ -168,7 +168,7 @@ a {
   font-size: 30px;
 }
 table {
-  background-color: #123;
+  background-color: rgb(200, 26, 26);
   width: 100%;
   text-align: center;
   border-spacing: 8px;
