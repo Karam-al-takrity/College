@@ -1,0 +1,127 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 15px 9% 100px;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
+}
+
+.box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  background: white;
+  padding: 30px 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  height: 400px;
+}
+
+.box:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+  border-color: #ff0000;
+  background-color: #ffeeee;
+}
+
+.box .default-content,
+.box .hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.box .default-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.box .hover-content {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box:hover .default-content {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box:hover .hover-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.box img {
+  height: 80px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.box h3 {
+  color: #444;
+  font-size: 22px;
+}
+
+.box p {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.box .btn {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 17px;
+  background: #ff0000;
+  border-radius: 5px;
+  padding: 8px 25px;
+  transition: all 0.3s ease;
+}
+
+.box .btn:hover {
+  background: #cc0000;
+  letter-spacing: 1px;
+}
+
+.box .btn i {
+  margin-right: 8px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bolder;
+}
+
+.sub-text {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: black;
+}
